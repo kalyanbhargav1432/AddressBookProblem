@@ -12,25 +12,25 @@ public class UserInterface {
 	}
 
 	public void edit(AddressBook contact) {
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter details of firstname,lastname,address,city,state,zip,phonenumber,email:");
 		System.out.println("Enter firtstname:");
-		contact.setFirstName(scanner.nextLine());
+		contact.setFirstName(sc.nextLine());
 		System.out.println("Enter lastname:");
-		contact.setLastName(scanner.nextLine());
+		contact.setLastName(sc.nextLine());
 		System.out.println("Enter address:");
-		contact.setAddress(scanner.nextLine());
+		contact.setAddress(sc.nextLine());
 		System.out.println("Enter city:");
-		contact.setCity(scanner.nextLine());
+		contact.setCity(sc.nextLine());
 		System.out.println("Enter state:");
-		contact.setState(scanner.nextLine());
+		contact.setState(sc.nextLine());
 		System.out.println("Enter zip:");
-		contact.setZip(scanner.nextLine());
+		contact.setZip(sc.nextLine());
 		System.out.println("Enter phoneNumber:");
-		contact.setPhoneNumber(scanner.nextLine());
+		contact.setPhoneNumber(sc.nextLine());
 		System.out.println("Enter email:");
-		contact.setEmail(scanner.nextLine());
-		scanner.close();
+		contact.setEmail(sc.nextLine());
+		sc.close();
 	}
 
 }

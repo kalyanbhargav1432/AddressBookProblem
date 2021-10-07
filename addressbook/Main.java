@@ -1,5 +1,6 @@
 package addressbook;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Main {
@@ -52,7 +53,7 @@ public class Main {
 
 		UserInterface userInterface = new UserInterface();
 		userInterface.print(contactBook.getContactList());
-
+	
 		System.out.println("enter name of contact you want to edit:");
 		String name = scanner.nextLine();
 		if (person1.getFirstName().equalsIgnoreCase(name) == true) {
@@ -63,9 +64,23 @@ public class Main {
 		} 
 		else if (person3.getFirstName().equalsIgnoreCase(name) == true) {
 			userInterface.edit(person3);
-		} else
-			System.out.println("enter correct person details");
+		} 
+		
 		System.out.println("contact list after edit");
+		userInterface.print(contactBook.getContactList());
+		
+		System.out.println("enter name of contact person you want to delete:");
+		String person = scanner.nextLine();
+		if (person1.getFirstName().equalsIgnoreCase(person) == true) {
+			contactBook.remove(person1);
+		} 
+		else if (person2.getFirstName().equalsIgnoreCase(person) == true) {
+			contactBook.remove(person2);
+		} 
+		else if (person3.getFirstName().equalsIgnoreCase(person) == true) {
+			contactBook.remove(person3);
+		}
+		System.out.println("contact list after delete:");
 		userInterface.print(contactBook.getContactList());
 	}
 }

@@ -2,7 +2,6 @@ package addressbook;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.Scanner;
 
 public class ContactBook {
 	private Set<AddressBook> contactList = new HashSet<>();
@@ -13,5 +12,9 @@ public class ContactBook {
 
 	public void add(AddressBook contact) {
 		contactList.add(contact);
+	}
+
+	public void remove(AddressBook contact) {
+		contactList.remove(contact);
 	}
 }
