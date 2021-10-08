@@ -30,7 +30,5 @@ public class UserInterface {
 		contact.setPhoneNumber(sc.nextLine());
 		System.out.println("Enter email:");
 		contact.setEmail(sc.nextLine());
-		sc.close();
 	}
-
 }

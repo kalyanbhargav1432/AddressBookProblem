@@ -13,7 +13,7 @@ public class ContactBook {
 	public void add(AddressBook contact) {
 		contactList.add(contact);
 	}
-
+	
 	public void remove(AddressBook contact) {
 		contactList.remove(contact);
 	}
