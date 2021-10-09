@@ -31,4 +31,25 @@ public class UserInterface {
 		System.out.println("Enter email:");
 		contact.setEmail(sc.nextLine());
 	}
+
+	public void addit(AddressBook person) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter details of firstname,lastname,address,city,state,zip,phonenumber,email:");
+		System.out.println("Enter firtstname:");
+		person.setFirstName(sc.nextLine());
+		System.out.println("Enter lastname:");
+		person.setLastName(sc.nextLine());
+		System.out.println("Enter address:");
+		person.setAddress(sc.nextLine());
+		System.out.println("Enter city:");
+		person.setCity(sc.nextLine());
+		System.out.println("Enter state:");
+		person.setState(sc.nextLine());
+		System.out.println("Enter zip:");
+		person.setZip(sc.nextLine());
+		System.out.println("Enter phoneNumber:");
+		person.setPhoneNumber(sc.nextLine());
+		System.out.println("Enter email:");
+		person.setEmail(sc.nextLine());
+	}
 }
