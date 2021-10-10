@@ -54,6 +54,7 @@ public class Main {
 		userInterface.print(contactBook.getContactList());
 		UserInterface1 userInterface1 = new UserInterface1();
 		userInterface1.print1(contactBook.getContactList1());
+		
 		for (int n = 1; n <= 3; n++) {
 			System.out.println("enter option 1.add the new contact,2.edit existing contact,3.remove the contact");
 			int option = scanner.nextInt();

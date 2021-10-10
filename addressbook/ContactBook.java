@@ -21,4 +21,11 @@ public class ContactBook {
 	public void remove(AddressBook contact) {
 		contactList.remove(contact);
 	}
+	public void add(AddressBook1 contact) {
+		contactList1.add(contact);
+	}
+	
+	public void remove(AddressBook1 contact) {
+		contactList1.remove(contact);
+	}
 }
