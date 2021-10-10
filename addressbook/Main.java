@@ -52,6 +52,8 @@ public class Main {
 
 		UserInterface userInterface = new UserInterface();
 		userInterface.print(contactBook.getContactList());
+		UserInterface1 userInterface1 = new UserInterface1();
+		userInterface1.print1(contactBook.getContactList1());
 		for (int n = 1; n <= 3; n++) {
 			System.out.println("enter option 1.add the new contact,2.edit existing contact,3.remove the contact");
 			int option = scanner.nextInt();
@@ -65,6 +67,7 @@ public class Main {
 					System.out.println("contact list after add");
 					contactBook.add(person);
 					userInterface.print(contactBook.getContactList());
+					userInterface1.print1(contactBook.getContactList1());
 				}
 				break;
 			case 2:
@@ -79,6 +82,7 @@ public class Main {
 						userInterface.edit(person3);
 					System.out.println("contact list after edit");
 					userInterface.print(contactBook.getContactList());
+					userInterface1.print1(contactBook.getContactList1());
 				}
 				break;
 			case 3:
@@ -93,6 +97,7 @@ public class Main {
 					contactBook.remove(person3);
 				System.out.println("contact list after delete:");
 				userInterface.print(contactBook.getContactList());
+				userInterface1.print1(contactBook.getContactList1());
 				break;
 			}
 		}
