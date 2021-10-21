@@ -2,7 +2,7 @@ package addressbook;
 
 import java.util.Scanner;
 
-public abstract class AddressBook {
+public abstract class PersonDetail {
 	private String firstName;
 	private String lastName;
 	private String address;

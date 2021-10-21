@@ -1,8 +1,8 @@
 package addressbook;
 
-public class ContactBook extends AddressBook {
+public class ContactDetails extends PersonDetail {
 	public static void main(String[] args) {
-		ContactBook person1 = new ContactBook();
+		ContactDetails person1 = new ContactDetails();
 		person1.getFirstName();
 		person1.getLastName();
 		person1.getAddress();
@@ -13,5 +13,4 @@ public class ContactBook extends AddressBook {
 		person1.getZip();
 		System.out.println(person1.toString());
 	}
-
 }
