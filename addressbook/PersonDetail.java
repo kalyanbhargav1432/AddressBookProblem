@@ -21,7 +21,6 @@ public abstract class PersonDetail {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
-		contactDetails.add(firstName);
 	}
 
 	public String getLastName() {
@@ -30,7 +29,6 @@ public abstract class PersonDetail {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-		contactDetails.add(lastName);
 	}
 
 	public String getAddress() {
@@ -39,7 +37,6 @@ public abstract class PersonDetail {
 
 	public void setAddress(String address) {
 		this.address = address;
-		contactDetails.add(address);
 	}
 
 	public String getCity() {
@@ -48,7 +45,6 @@ public abstract class PersonDetail {
 
 	public void setCity(String city) {
 		this.city = city;
-		contactDetails.add(city);
 	}
 
 	public String getState() {
@@ -57,7 +53,6 @@ public abstract class PersonDetail {
 
 	public void setState(String state) {
 		this.state = state;
-		contactDetails.add(state);
 	}
 
 	public String getEmail() {
@@ -66,7 +61,6 @@ public abstract class PersonDetail {
 
 	public void setEmail(String email) {
 		this.email = email;
-		contactDetails.add(email);
 	}
 
 	public String getPhoneNumber() {
@@ -75,7 +69,6 @@ public abstract class PersonDetail {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-		contactDetails.add(phoneNumber);
 	}
 
 	public String getZip() {
@@ -84,12 +77,12 @@ public abstract class PersonDetail {
 
 	public void setZip(String zip) {
 		this.zip = zip;
-		contactDetails.add(zip);
 	}
 
 	@Override
 	public String toString() {
-		return "PersonDetail [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address +", city=" + city + ", state="
-				+ state + ", email=" + email + ", phoneNumber=" + phoneNumber + ", zip=" + zip + "]";
+		return "PersonDetail [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
+				+ city + ", state=" + state + ", email=" + email + ", phoneNumber=" + phoneNumber + ", zip=" + zip
+				+ "]";
 	}
 }
