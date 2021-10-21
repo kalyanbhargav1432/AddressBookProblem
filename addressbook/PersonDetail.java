@@ -1,6 +1,6 @@
 package addressbook;
 
-import java.util.Scanner;
+import java.util.*;
 import java.util.ArrayList;
 
 public abstract class PersonDetail {
@@ -64,9 +64,9 @@ public abstract class PersonDetail {
 		return email;
 	}
 
-	public void setEmail(String e_mail) {
-		this.email = e_mail;
-		contactDetails.add(e_mail);
+	public void setEmail(String email) {
+		this.email = email;
+		contactDetails.add(email);
 	}
 
 	public String getPhoneNumber() {
@@ -83,14 +83,13 @@ public abstract class PersonDetail {
 	}
 
 	public void setZip(String zip) {
-		this.zip= zip;
+		this.zip = zip;
 		contactDetails.add(zip);
 	}
 
 	@Override
 	public String toString() {
-		return "PersonDetail [contactDetails=" + contactDetails + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", address=" + address + ", city=" + city + ", state=" + state + ", email=" + email
-				+ ", phoneNumber=" + phoneNumber + ", zip=" + zip + "]";
+		return "PersonDetail [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address +", city=" + city + ", state="
+				+ state + ", email=" + email + ", phoneNumber=" + phoneNumber + ", zip=" + zip + "]";
 	}
 }
