@@ -1,5 +1,6 @@
 package addressbook;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class AddContact extends PersonDetail {
@@ -33,5 +34,35 @@ public class AddContact extends PersonDetail {
 		getPhoneNumber();
 		getZip();
 		getEmail();
+	}
+
+	public void editDetails() {
+		Iterator<String> checkName = contactDetails.iterator();
+		String name = scanData.nextLine();
+		int index = contactDetails.indexOf(name);
+		while (true) {
+			if (contactDetails.contains(name)) {
+				System.out.println("enter the first name");
+				contactDetails.set(index, scanData.nextLine());
+				System.out.println("enter lastname");
+				contactDetails.set(++index, scanData.nextLine());
+				System.out.println("enter the address");
+				contactDetails.set(++index, scanData.nextLine());
+				System.out.println("enter the city");
+				contactDetails.set(++index, scanData.nextLine());
+				System.out.println("enter the state");
+				contactDetails.set(++index, scanData.nextLine());
+				System.out.println("enter the phonenumber");
+				contactDetails.set(++index, scanData.nextLine());
+				System.out.println("enter the Zip");
+				contactDetails.set(++index, scanData.nextLine());
+				System.out.println("enter the email");
+				contactDetails.set(++index, scanData.nextLine());
+				break;
+			} else {
+				System.out.println("not match any details");
+				break;
+			}
+		}
 	}
 }

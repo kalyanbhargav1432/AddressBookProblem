@@ -1,6 +1,8 @@
 package addressbook;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
 public class ContactDetailsMain {
 	
 	private static char inputCharater() {
@@ -21,11 +23,21 @@ public class ContactDetailsMain {
 					addPersonDetails.SetContactDetails();
 					addPersonDetails.getContactDetails();
 					break;
-				default :
-					System.out.println("You not want to enter any details");
+				case 'E':
+					System.out.println("Enter the name to edit");
+					String editDetails = addPersonDetails.scanData.nextLine();
+					addPersonDetails.editDetails();
+					break;
+				default:
+					System.out.println("data successfulentered");
+					break;
 				}
+
+			} else {
+				System.out.println("Invalid input");
+				break;
 			}
-			System.out.println(addPersonDetails.contactDetails);
 		}
+		System.out.println(addPersonDetails.contactDetails);
 	}
 }
