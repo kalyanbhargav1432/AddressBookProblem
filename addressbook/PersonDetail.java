@@ -1,8 +1,11 @@
 package addressbook;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public abstract class PersonDetail {
+	ArrayList<String> contactDetails = new <String>ArrayList(4);
+
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -12,53 +15,82 @@ public abstract class PersonDetail {
 	private String phoneNumber;
 	private String zip;
 
-	Scanner scanner = new Scanner(System.in);
-
-	public void getEmail() {
-		System.out.println("Enter the Email:");
-		email = scanner.nextLine();
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void getFirstName() {
-		System.out.println("Enter the first Name:");
-		firstName = scanner.nextLine();
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+		contactDetails.add(firstName);
 	}
 
-	public void getLastName() {
-		System.out.println("Enter the Last Name:");
-		lastName = scanner.nextLine();
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void getAddress() {
-		System.out.println("Enter the Address:");
-		address = scanner.nextLine();
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+		contactDetails.add(lastName);
 	}
 
-	public void getCity() {
-		System.out.println("Enter the City:");
-		city = scanner.nextLine();
+	public String getAddress() {
+		return address;
 	}
 
-	public void getState() {
-		System.out.println("Enter the State:");
-		state = scanner.nextLine();
+	public void setAddress(String address) {
+		this.address = address;
+		contactDetails.add(address);
 	}
 
-	public void getPhoneNumber() {
-		System.out.println("Enter the Phone Number:");
-		phoneNumber = scanner.nextLine();
+	public String getCity() {
+		return city;
 	}
 
-	public void getZip() {
-		System.out.println("Enter the Zip: ");
-		zip = scanner.nextLine();
+	public void setCity(String city) {
+		this.city = city;
+		contactDetails.add(city);
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+		contactDetails.add(state);
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String e_mail) {
+		this.email = e_mail;
+		contactDetails.add(e_mail);
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+		contactDetails.add(phoneNumber);
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip= zip;
+		contactDetails.add(zip);
 	}
 
 	@Override
 	public String toString() {
-		return "AddressBook [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
-				+ city + ", state=" + state + ", email=" + email + ", phoneNumber=" + phoneNumber + ", zip=" + zip
-				+ ", scanner=" + scanner + "]";
+		return "PersonDetail [contactDetails=" + contactDetails + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", address=" + address + ", city=" + city + ", state=" + state + ", email=" + email
+				+ ", phoneNumber=" + phoneNumber + ", zip=" + zip + "]";
 	}
-
 }
