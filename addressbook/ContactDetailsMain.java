@@ -2,12 +2,10 @@ package addressbook;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Dictionary;
 import java.util.Hashtable;
 
 public class ContactDetailsMain {
 
-	static Dictionary dictionary = new Hashtable();
 	static Hashtable<Integer, ArrayList<AddContact>> hashTable = new Hashtable<Integer, ArrayList<AddContact>>();
 
 	private static char inputCharater() {
